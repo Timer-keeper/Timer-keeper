@@ -1,3 +1,4 @@
-<p align="center">
-  <img src="/github-metrics.svg" alt="Metrics" width="100%">
-</p>
+## Metrics
+![[github-metrics.svg]]
+## Stats
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=Timer-keeper&theme=default&show_icons=true&hide_border=true&count_private=true)
