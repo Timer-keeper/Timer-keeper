@@ -1,11 +1,11 @@
 name: GitHub Metrics
 on:
   # 每周一 UTC 时间 0 点更新 (北京时间 8:00)
-  schedule: [{cron: "0 0 * * 1"}]
+  schedule: [{ cron: "0 0 * * 1" }]
   # 手动触发选项
   workflow_dispatch:
   # 推送到主分支时触发
-  push: {branches: ["master", "main"]}
+  push: { branches: ["master", "main"] }
 jobs:
   generate-metrics:
     runs-on: ubuntu-latest
@@ -16,13 +16,13 @@ jobs:
         with:
           # 认证令牌
           token: ${{ secrets.METRICS_TOKEN }}
-          
+
           # 基础配置
           user: Timer-keeper
           template: classic
           base: header, activity, community, repositories, metadata
           config_timezone: Asia/Shanghai
-          
+
           # 编程习惯插件
           plugin_habits: yes
           plugin_habits_charts_type: classic
@@ -31,11 +31,11 @@ jobs:
           plugin_habits_from: 200
           plugin_habits_languages_limit: 8
           plugin_habits_languages_threshold: 0%
-          
+
           # 贡献日历插件
           plugin_isocalendar: yes
           plugin_isocalendar_duration: full-year
-          
+
           # 语言分析插件
           plugin_languages: yes
           plugin_languages_analysis_timeout: 30
